@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+.env
+
+# Data & Interactive Notebook Checkpoints
+data/*.csv
+.ipynb_checkpoints/
+.vscode/
+.idea/
+*.png
+*.svg

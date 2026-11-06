@@ -1,0 +1,7 @@
+simulation:
+  ticker: "AAPL"
+  period: "2y"
+  forecast_days: 252
+  num_simulations: 10000
+  confidence_level: 0.95
+  random_seed: 42
