@@ -1,7 +1,7 @@
 import yaml
-from src.data_loader import MarketDataLoader
-from src.simulation import MonteCarloSimulator
-from src.metrics import calculate_risk_metrics
+from data_loader import MarketDataLoader
+from simulation import MonteCarloSimulator
+from metrics import calculate_risk_metrics
 
 def main():
     with open("config.yaml", "r") as f:
@@ -24,8 +24,7 @@ def main():
 
     results = calculate_risk_metrics(price_paths, last_price, config["confidence_level"])
 
-    print("
-================ FORECAST RESULTS ================")
+    print("================ FORECAST RESULTS ================")
     print(f"Ticker Symbol:               {ticker}")
     print(f"Current Stock Price:         ${results['current_price']:.2f}")
     print(f"1-Year Median Target Price:  ${results['median_target']:.2f}")
@@ -33,8 +32,7 @@ def main():
     print(f"95% Confidence Interval:     [${results['lower_bound']:.2f} - ${results['upper_bound']:.2f}]")
     print(f"95% 1-Year Value at Risk:    ${results['var_95']:.2f}")
     print(f"95% Conditional VaR (CVaR):  ${results['cvar_95']:.2f}")
-    print("==================================================
-")
+    print("==================================================")
 
 if __name__ == "__main__":
     main()
